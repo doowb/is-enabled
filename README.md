@@ -1,6 +1,6 @@
 # is-enabled [![NPM version](https://img.shields.io/npm/v/is-enabled.svg)](https://www.npmjs.com/package/is-enabled) [![Build Status](https://img.shields.io/travis/https://github.com/doowb/is-enabled.svg)](https://travis-ci.org/https://github.com/doowb/is-enabled)
 
-> Check if a property on an object is enabled while applying falsey key paths.
+> Using key paths that may contain "falsey" patterns, check if a property on an object is enabled.
 
 ## Install
 
