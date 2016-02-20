@@ -35,6 +35,14 @@ utils.isFalsey = function(val, options) {
   return utils.falsey(val, opts.keywords);
 };
 
+utils.isEmpty = function(val) {
+  if (!val) return true;
+  if (Array.isArray(val) && val.length === 0) {
+    return true;
+  }
+  return false;
+};
+
 /**
  * Expose `utils` modules
  */
