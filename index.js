@@ -12,18 +12,21 @@ var utils = require('./utils');
 /**
  * Create a plugin to add `isEnabled` to an application.
  *
- * @param  {Object} `options` Options to use to when checking for flasey values.
- * @return {Function} Smart plugin function to pass into `app.use`
+ * @param  {Object} `options` Options to use to when checking for falsey values.
+ * @return {Function} Plugin function to pass into `app.use`
  * @api public
  */
 
 module.exports = function(options) {
-  var opts = utils.extend({}, options);
+  var opts = utils.extend({prop: 'options', strict: false}, options);
+  var prop = opts.prop;
+  var strict = opts.strict;
+
   return function(app) {
     if (typeof app.isEnabled === 'function') return;
 
     this.define('isEnabled', function(keys) {
-      if (isEmpty(keys)) return true;
+      if (isEmpty(keys)) return !strict;
       if (typeof keys === 'string') {
         keys = keys.split('.');
       }
@@ -40,7 +43,7 @@ module.exports = function(options) {
 
       var key = keys[0];
       if (isEmpty(key)) return flag;
-      return this.options[key] === flag;
+      return this[prop][key] === flag;
     });
 
     function isEmpty(val) {
