@@ -9,7 +9,7 @@
 
 var utils = require('lazy-cache')(require);
 var fn = require;
-require = utils;
+require = utils; // eslint-disable-line no-native-reassign
 
 /**
  * Lazily required module dependencies
@@ -17,7 +17,7 @@ require = utils;
 
 require('extend-shallow', 'extend');
 require('falsey');
-require = fn;
+require = fn; // eslint-disable-line no-native-reassign
 
 // default keywords for falsey
 var keywords = ['none', 'nil', 'nope', 'no', 'not', 'nada', '0', 'false'];
