@@ -1,4 +1,4 @@
-# is-enabled [![NPM version](https://img.shields.io/npm/v/is-enabled.svg)](https://www.npmjs.com/package/is-enabled) [![Build Status](https://img.shields.io/travis/https://github.com/doowb/is-enabled.svg)](https://travis-ci.org/https://github.com/doowb/is-enabled)
+# is-enabled [![NPM version](https://img.shields.io/npm/v/is-enabled.svg)](https://www.npmjs.com/package/is-enabled) [![Build Status](https://img.shields.io/travis/doowb/is-enabled.svg)](https://travis-ci.org/doowb/is-enabled)
 
 > Using key paths that may contain "falsey" patterns, check if a property on an object is enabled.
 
@@ -94,7 +94,7 @@ Pull requests and stars are always welcome. For bugs and feature requests, [plea
 ## License
 
 Copyright © 2016 [Brian Woodward](https://github.com/doowb)
-Released under the [MIT license](https://github.com/https://github.com/doowb/is-enabled/blob/master/LICENSE).
+Released under the [MIT license](https://github.com/doowb/is-enabled/blob/master/LICENSE).
 
 ***
 
